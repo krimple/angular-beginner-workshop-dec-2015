@@ -1,0 +1,23 @@
+{
+  "name": "angular-project",
+  "version": "1.0.0",
+  "description": "Our first angular project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ken Rimple",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "perf-time": "^0.1.0"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.15",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.6",
+    "karma-story-reporter": "^0.3.1",
+    "perf-time": "^0.1.0"
+  }
+}
