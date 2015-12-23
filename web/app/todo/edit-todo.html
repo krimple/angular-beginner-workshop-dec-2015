@@ -1,0 +1,19 @@
+<h1>Add a new task...</h1>
+
+<form name="todoForm"
+      ng-submit="createOrUpdate(todo)"
+      novalidate>
+
+    <h2>
+        Description
+    </h2>
+    <input type="text"
+           ng-model="todo.description"
+           required>
+    <h2>
+        Complete?
+    </h2>
+    <input type="checkbox" ng-model="todo.complete">
+    <br>
+    <button ng-disabled="todoForm.$invalid">Save</button>
+</form>

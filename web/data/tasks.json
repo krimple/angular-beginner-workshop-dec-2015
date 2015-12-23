@@ -1,0 +1,6 @@
+[
+        {"description": "Clean the dishes", "complete": false},
+        {"description": "Clean the sink", "complete": false},
+        {"description": "Wash the floor", "complete": false},
+        {"description": "Wash the windows", "complete": false}
+]

@@ -1,7 +1,6 @@
 angular.module('todoListApp',
   ['ngAnimate', 'ngAria', 'ngMaterial', 'ngRoute'])
-.config(configureRoutesFn)
-.run(loadTasksFn);
+.config(configureRoutesFn);
 
 function configureRoutesFn($routeProvider) {
   $routeProvider
@@ -10,8 +9,12 @@ function configureRoutesFn($routeProvider) {
       templateUrl: 'app/todo/todo-list.html'
     })
     .when('/todo/new', {
-      controller: 'AddTodoController',
-      templateUrl: 'app/todo/add-todo.html'
+      controller: 'EditTodoController',
+      templateUrl: 'app/todo/edit-todo.html'
+    })
+    .when('/todo/:id', {
+      controller: 'EditTodoController',
+      templateUrl: 'app/todo/edit-todo.html'
     })
     .when('/config', {
       templateUrl: 'app/config/config-form.html'
@@ -19,8 +22,4 @@ function configureRoutesFn($routeProvider) {
     .otherwise({
       redirectTo: '/todo'
     });
-}
-
-function loadTasksFn(todoService) {
-  todoService.bootstrap();
 }

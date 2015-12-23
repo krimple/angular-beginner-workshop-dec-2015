@@ -1,16 +1,20 @@
 <h1>TODO LIST</h1>
 
 <md-content>
-    <md-card ng-repeat="todo in todos">
+    <md-card ng-repeat="todo in todos track by $index">
         <md-card-title>
-            <h2 ng-bind="todo.description"></h2>
+            <a ng-href="#/todo/{{ todo.id }}">
+                <h2 ng-bind="todo.description"></h2>
+            </a>
         </md-card-title>
 
         <md-card-content>
             Complete?
             <input type="checkbox"
                    ng-model="todo.complete"
-                   ng-change="save()">
+                   ng-change="toggleComplete(todo)">
+
+            <button ng-click="delete(todo)">Delete!</button>
         </md-card-content>
     </md-card>
 </md-content>
